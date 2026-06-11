@@ -111,7 +111,7 @@ departments on dept_emp.dept_no = departments.dept_no where employees.emp_no = "
 function salhis($id){
 
     $sql = "SELECT * FROM salaries where emp_no =".$id ;
-echo $sql;
+    echo $sql;
     $nes = mysqli_query(dbconnect(),$sql);
     $result =array();
     while ($news = mysqli_fetch_assoc($nes)){
@@ -119,14 +119,6 @@ echo $sql;
     }
     mysqli_free_result($nes);
     return $result;
-
-
-
-// CREATE TABLE salaries (
-//     emp_no      INT             NOT NULL,
-//     salary      INT             NOT NULL,
-//     from_date   DATE            NOT NULL,
-//     to_date     DATE            NOT NULL,
 
 
 
