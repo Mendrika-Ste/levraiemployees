@@ -139,7 +139,7 @@ function lesdep(){
 
 
 function cherche($dep,$nom,$min,$max){
-    // SELECT year(curdate()) - year(birth_date) FROM employees;
+    // v_emp=  create or replace view v_emp as (select year(curdate())-year(birth_date) as age , emp_no,first_name,last_name,gender,hire_date from employees);
     $sql="SELECT departments.dept_no as depid ,dept_emp.emp_no as empid,
     first_name,last_name,age,gender,dept_name
     FROM dept_emp join departments on departments.dept_no = dept_emp.dept_no 

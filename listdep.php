@@ -20,6 +20,7 @@ $result2 = deplistaddman();
 </head>
 <body>
 
+   
     <div class="container">
     <div class="bg-primary text-white p-3">
     <!-- <div class="mt-3 py-5"> -->
@@ -30,7 +31,7 @@ $result2 = deplistaddman();
 
     <div class="text-center">
     
-    <table border=1 width="800" height="700" >
+    <table width="1700" height="750" >
     <tr>
         <th>Id du departement</th>
         <th>Nom du departement</th>
@@ -40,9 +41,9 @@ $result2 = deplistaddman();
     <?php foreach($result2 as $der){ ?>
 
     <tr>
-        <td><?php echo $der['id'] ?></td>
-        <td><a href="listemp.php?dept=<?php echo $der['id'] ?>"><?php echo $der['dept_name'] ?></a></td>
-        <td><?php echo $der['first_name'] ?> <?php echo $der['last_name'] ?></td>
+        <td><div class="text-danger"><h5><?php echo $der['id'] ?></h5></div></td>
+        <td><h5><a href="listemp.php?dept=<?php echo $der['id'] ?>"><?php echo $der['dept_name'] ?></h5></a></td>
+        <td><div class="text-success"><h5><?php echo $der['first_name'] ?> <?php echo $der['last_name'] ?></h5></div></td>
     </tr>
     <?php } ?>
 
@@ -59,6 +60,8 @@ $result2 = deplistaddman();
         </div>
         </footer>
     </div>
+
+
 
 
 

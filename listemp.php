@@ -13,13 +13,22 @@ $result2 = farany($_GET["dept"]);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">    
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
 
-    <h1>List des employees de ce departement (<?php echo $_GET["dept"] ?>):</h1>
+    <div class="bg-primary text-white p-3">
+    <h1 class="text-white text-center">List des employees de ce departement (<?php echo $_GET["dept"] ?>)</h1>
+    </div>
+    
 
-    <ul>
+    <div class="text-center">
+
+    <ul style = "list-style-type: none;">
         <?php foreach($result2 as $der){ ?>
 
         <li><a href="emp.php?idemp=<?php echo $der['emp_no'] ?>"> <?php echo $der['first_name'] ?> <?php echo $der['last_name'] ?> </a></li>
@@ -42,8 +51,19 @@ $result2 = farany($_GET["dept"]);
         <td><?php echo $der['first_name'] ?> <?php echo $der['last_name'] ?></td>
     </tr>
     <?php } ?>
-
+    
     </table> -->
+    </div>
+
+    <footer>
+        <div class="rounded-5 bg-success p-3">
+        <!-- <div class="mt-3 py-5"> -->
+            <p class="text-white text-center">ETU004699-ETU004731</p>
+        <!-- </div> -->
+        </div>
+        </footer> 
+    </div>
+
 
 
 

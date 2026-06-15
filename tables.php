@@ -13,15 +13,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">    
+   
     <title>Document</title>
 </head>
 <body>
-    <h1>Resultat de Recherche</h1>
-    <table border=1 >
+    <div class="container">
+    <div class="bg-primary text-white p-3">
+    <h1 class="text-white text-center">Resultat de Recherche</h1>
+    </div>
+    <table width=1200 >
         <tr>
-            <td>Nom employees</td>
-            <td>Age</td>
-            <td>Genre</td>
+            <th>Nom employees</th>
+            <th>Age</th>
+            <th>Genre</th>
         </tr>
         
         <?php foreach($res as $de){ ?>
@@ -32,10 +39,20 @@
         </tr>
         <?php } ?>
     </table>
+    <!-- </div> -->
+
 
     <a href="#">Suivant</a>
     <a href="#">Precedent</a>
 
+        <footer>
+        <div class="rounded-5 bg-success p-3">
+        <!-- <div class="mt-3 py-5"> -->
+            <p class="text-white text-center">ETU004699-ETU004731</p>
+        <!-- </div> -->
+        </div>
+        </footer> 
+    </div>
 
 
 
