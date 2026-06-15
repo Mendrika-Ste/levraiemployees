@@ -124,8 +124,44 @@ function salhis($id){
 
 }
 
+function lesdep(){
+    $sql="SELECT * FROM departments";
+    echo $sql;
+    $nes = mysqli_query(dbconnect(),$sql);
+    $result =array();
+    while ($news = mysqli_fetch_assoc($nes)){
+        $result[] = $news;
+    }
+    mysqli_free_result($nes);
+    return $result;
+
+}
 
 
+function cherche($dep,$nom,$min,$max){
+    // SELECT year(curdate()) - year(birth_date) FROM employees;
+    $sql="SELECT departments.dept_no as depid ,dept_emp.emp_no as empid,
+    first_name,last_name,age,gender,dept_name
+    FROM dept_emp join departments on departments.dept_no = dept_emp.dept_no 
+    join v_emp on v_emp.emp_no = dept_emp.emp_no 
+    where departments.dept_name = '$dep' and (((v_emp.first_name like '%". $nom."%'
+    or v_emp.last_name like '%". $nom."%' ) or ((v_emp.first_name like '". $nom."%'
+    or v_emp.last_name like '". $nom."%' ) or (v_emp.first_name like '%". $nom."'
+    or v_emp.last_name like '%". $nom."')) ) and 
+    (age > '".$min."' and age < '".$max."' )) LIMIT 20 ";
+    //    echo $sql;
+    $nes = mysqli_query(dbconnect(),$sql);
+    $result =array();
+    while ($news = mysqli_fetch_assoc($nes)){
+        $result[] = $news;
+    }
+    mysqli_free_result($nes);
+    return $result;
+
+
+
+
+}
 
 
 
