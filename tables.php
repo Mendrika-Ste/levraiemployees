@@ -33,7 +33,8 @@
         <?php } ?>
     </table>
 
-
+    <a href="#">Suivant</a>
+    <a href="#">Precedent</a>
 
 
 

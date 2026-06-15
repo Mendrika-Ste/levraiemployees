@@ -60,6 +60,8 @@ $se= histo($_GET["idemp"]);
 
 
 
+<a href="recherche.php">Recherche</a>
+
 
 </body>
 </html>
