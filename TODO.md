@@ -5,3 +5,28 @@
     Mettre d'ETU en utisant bootstrap au bas 
 -Style.css:
     Mettre un image pour le fond d'ecran
+
+-V2 
+Lorsqu'on clique sur un employé, on doit afficher la fiche de l'employé
+. Rajouter l'historique du salaire et de l'emploi occupe dans la fiche, (ok)
+. Créer un formulaire de recherche ( departement, nom employé, age min et max )(ok)
+. Afficher seulement 20 lignes (utiliser LIMIT en SQL )(ok)
+ 
+ -V3 (1h30) etu4731
+. Ajouter une colonne nombre employé sur la liste des départements (ok)
+. Créer une page pour afficher un tableau contenant le nombre d'employé (homme et femme ), et le salaire moyen pour chaque emploi (ok)
+. Dans la fiche employé, mettre l'emploi le plus long (en terme de date) (ok)
+
+-V4
+2-
+.un formulaire (Date
+de début)
+.
+
+
+
+
+
+
+
+

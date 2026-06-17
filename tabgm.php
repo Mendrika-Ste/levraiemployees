@@ -1,11 +1,8 @@
 <?php
-
 include("fonction.php");
-$result = deplist();
-$result2 = deplistaddman();
-$result3 = v31(); 
-?>
+$teb = v32();
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +21,7 @@ $result3 = v31();
     <div class="container">
     <div class="bg-primary text-white p-3">
     <!-- <div class="mt-3 py-5"> -->
-    <h1 class="text-white text-center">Liste de departement</h1>
+    <h1 class="text-white text-center">Tableau d'employees</h1>
     <!-- </div> -->
     </div>
     
@@ -33,19 +30,22 @@ $result3 = v31();
     
     <table width="1700" height="750" >
     <tr>
-        <th>Id du departement</th>
-        <th>Nom du departement</th>
-        <th>Nom du manager present</th>
-        <th>Nombre d'employees</th>
+        <th> Emploi </th>
+        <th> Homme </th>
+        <th> Femme </th>
+        <th> Salaire moyenne </th>
+
     </tr>
-    <?php foreach($result3 as $der){ ?>
+    <?php foreach($teb as $der){ ?>
 
     <tr>
-        <td><div class="text-danger"><h5><?php echo $der['id'] ?></h5></div></td>
-        <td><h5><a href="listemp.php?dept=<?php echo $der['id'] ?>"><?php echo $der['dept_name'] ?></h5></a></td>
-        <td><div class="text-success"><h5><?php echo $der['first_name'] ?> <?php echo $der['last_name'] ?></h5></div></td>
-        <td><div class="text-danger"><h5><?php echo $der['nb_emp'] ?></h5></div></td>
+        <td><div class="text-danger"><h5><?php echo $der['title'] ?></h5></div></td>
+        <td><div class="text-success"><h5><?php echo $der['ma'] ?></h5></div></td>
+        <td><div class="text-danger"><h5><?php echo $der['fe'] ?></h5></div></td>
+        <td><div class="text-danger"><h5><?php echo $der['ms'] ?></h5></div></td>
+    
     </tr>
+
     <?php } ?>
 
     </table>
@@ -68,21 +68,6 @@ $result3 = v31();
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

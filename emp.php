@@ -3,6 +3,7 @@ include("fonction.php");
 $grove = fichemp($_GET["idemp"]);
 $fe= salhis($_GET["idemp"]);
 $se= histo($_GET["idemp"]);
+$der= v33($_GET["idemp"]);
 
 ?>
 
@@ -51,14 +52,19 @@ $se= histo($_GET["idemp"]);
 </table>
 
 
+<h1> <?php foreach($der as $la){  
+    echo $la['title']; ?> avec : 
+
+<?php
+echo $la['datelong'];
+    }
+     ?> ans de travail</h1>
+
 
 <h2>Historique de son salaire :</h2>
     <?php foreach($fe as $per){ ?>
     <div class="text-success"><p>Debut : <?php echo $per['from_date'] ?>  et  Fin : <?php echo $per['to_date'] ?></p></div>
 <?php } ?>
-
-
-
 
 
 <h2>Historique de son emploi :</h2>
@@ -70,6 +76,13 @@ $se= histo($_GET["idemp"]);
 
 
 <a href="recherche.php">Recherche</a>
+
+<form action="formana.php" method="get">
+    <input type="hidden" name="idemp" value="<? echo $_GET['idemp']; ?>" >
+    <input type="submit" value="Devenir manager">
+</form>
+
+
 
 <footer>
         <div class="rounded-5 bg-success p-3">

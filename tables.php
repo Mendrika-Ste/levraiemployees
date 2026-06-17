@@ -5,6 +5,7 @@
     $amin= $_GET['amin'];
     $amax= $_GET['amax'];
     $res= cherche($dep,$nom,$amin,$amax);
+    
 ?>
 
 
