@@ -237,20 +237,29 @@ function v33($set){
 }
 
 
-function v42b($idemp){
-    $sql="SELECT first_name,last_name from employees where emp_no = '".$idemp."'";
-    echo $sql;
-    $nes = mysqli_query(dbconnect(),$sql);
-    $result = array();
-    while ($news = mysqli_fetch_assoc($nes)){
-        $result[] = $news;
-    }
-    mysqli_free_result($nes);
-    return $result;
+
+// function v42modif($idemp){
+//     $depart="SELECT dep" 
+//     $er="SELECT first_name, last_name dept_manager join employees on employees.emp_no = dept_manager.emp_no join 
+//     departments on dept_manager.dept_no = departments.dept_no where year(to_date) = 9999";
+//     $detlman= "UPDATE table set first_n";
+
+// }
 
 
+// function v42b($idemp){
+//     $sql="SELECT first_name, last_name dept_manager join employees on employees.emp_no = dept_manager.emp_no join 
+//     departments on dept_manager.dept_no = departments.dept_no where year(to_date) = 9999 and ";
+//     echo $sql;
+//     $nes = mysqli_query(dbconnect(),$sql);
+//     $result = array();
+//     while ($news = mysqli_fetch_assoc($nes)){
+//         $result[] = $news;
+//     }
+//     mysqli_free_result($nes);
+//     return $result;
 
-}
+// }
 
 
 

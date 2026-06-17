@@ -1,10 +1,3 @@
-<?php 
-$idemp = $_GET['idemp'];
-// $name = v42b($_GET['idemp']);
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +13,9 @@ $idemp = $_GET['idemp'];
     <div class="bg-primary text-white p-3">
     <h1 class="text-white text-center">Changer de departement</h1>
     </div> 
-    <form action="traite.php" method="post">
+    <form action="emp.php" method="get">
         <br><br><br><br>
+        <div class="text-center"><h2>Choix de departement:<br><input type="text" name="dep"></h2></div><br><br><br><br>
         <div class="text-center"><h2>Date de debut:<br><input type="date" name="date"></h2></div><br><br><br><br>
         <div class="text-center"><button class="btn btn-danger">OK</button></div><br><br><br><br>
     </form>
@@ -34,39 +28,4 @@ $idemp = $_GET['idemp'];
         </footer> 
     </div>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

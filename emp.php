@@ -73,13 +73,15 @@ echo $la['datelong'];
 <?php } ?>
 </div>
 
+<form action="change.php" method="get">
+</div>
+<div class="text-center"><button class="btn btn-danger">Changer de departement</button></div>
+</form>
 
-
-<a href="recherche.php">Recherche</a>
 
 <form action="formana.php" method="get">
     <input type="hidden" name="idemp" value="<? echo $_GET['idemp']; ?>" >
-    <input type="submit" value="Devenir manager">
+    <div class="text-center"><button class="btn btn-dark">Devenir manager</button></div>
 </form>
 
 
